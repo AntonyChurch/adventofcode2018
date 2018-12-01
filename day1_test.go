@@ -82,3 +82,15 @@ func TestOneBCalculator(t *testing.T){
 		t.Errorf("oneBCalculator: expected %d, actual %d", 14, test4)
 	}
 }
+
+func TestOneB(t *testing.T){
+	answer, err := oneB()
+
+	if err != nil {
+		t.Errorf("Error running OneA: %e", err)
+	}
+
+	if answer != 81972 {
+		t.Errorf("OneB: expected: 81972, actual %d", answer)
+	}
+}
