@@ -11,11 +11,19 @@ func main(){
 	
 	fmt.Printf("1A. %d\n", a1)
 
-	a2, err := oneB()
+	b1, err := oneB()
 
 	if err != nil {
 		fmt.Errorf("1B died", err)
 	}
 
-	fmt.Printf("1B. %d\n", a2)
+	fmt.Printf("1B. %d\n", b1)
+
+	a2, err := twoA()
+
+	if err != nil {
+		fmt.Errorf("2A died", err)
+	}
+
+	fmt.Printf("2A. %d\n", a2)
 }
