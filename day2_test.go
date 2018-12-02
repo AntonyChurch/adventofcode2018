@@ -28,6 +28,27 @@ func TestDay2ACalculator(t *testing.T){
 	answer := day2ACalculator(input)
 
 	if answer != 12 {
-		t.Errorf("2ACalculator: expected: 12 actual %d", answer)
+		t.Errorf("2ACalculator: expected: 12, actual: %d", answer)
+	}
+}
+
+func TestDay2B(t *testing.T){
+}
+
+func TestDay2BCalculator(t *testing.T){
+	input := []string{
+		"abcde",
+		"fghij",
+		"klmno",
+		"pqrst",
+		"fguij",
+		"axcye",
+		"wvxyz",
+	}
+
+	answer := day2BCalculator(input)
+
+	if answer != "fgij" {
+		t.Errorf("2BCalculator: expected: 'fgij', actual: '%s'", answer)
 	}
 }

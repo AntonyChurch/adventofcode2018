@@ -49,6 +49,10 @@ func day2ACalculator(strings []string) int {
 	return twos * threes
 }
 
+func day2BCalculator(strings []string) string {
+	return ""
+}
+
 func getStringsFromFile(filename string) ([]string, error) {
 	file, err := os.Open(filename)
 	if err != nil {
