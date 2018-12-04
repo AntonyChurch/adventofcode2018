@@ -26,4 +26,12 @@ func main(){
 	}
 
 	fmt.Printf("2A. %d\n", a2)
+
+	b2, err := twoB()
+
+	if err != nil {
+		fmt.Errorf("2A died", err)
+	}
+
+	fmt.Printf("2B. %s\n", b2)
 }

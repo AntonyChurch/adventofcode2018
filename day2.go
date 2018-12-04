@@ -49,7 +49,41 @@ func day2ACalculator(strings []string) int {
 	return twos * threes
 }
 
+func twoB() (string, error){
+	strings, err := getStringsFromFile("./day2_input")
+
+	if err != nil {
+		return "", err
+	}
+	
+	return day2BCalculator(strings), nil
+}
+
+
 func day2BCalculator(strings []string) string {
+	for _, str1 := range strings {
+		for _, str2 := range strings {
+			diffs := 0
+			diffPlace := -1
+			for i := 0; i < len(str1); i++ {
+				if str1[i] != str2[i] {
+					diffs++
+					diffPlace = i
+				}
+			}
+
+			if diffs == 1 {
+				strReturn := ""
+				for i := 0; i < len(str1); i++ {
+					if i != diffPlace {
+						strReturn += string(str1[i])
+					}
+				}
+				return strReturn
+			}
+		}
+	}
+	
 	return ""
 }
 

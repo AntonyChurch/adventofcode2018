@@ -33,6 +33,15 @@ func TestDay2ACalculator(t *testing.T){
 }
 
 func TestDay2B(t *testing.T){
+	answer, err := twoB()
+
+	if err != nil {
+		t.Errorf("2A: died", err)
+	}
+
+	if answer != "cvqlbidheyujgtrswxmckqnap" {
+		t.Errorf("2A: expected: 6642, actual: %s", answer)
+	}
 }
 
 func TestDay2BCalculator(t *testing.T){
