@@ -20,9 +20,10 @@ func TestThreeACalculator(t *testing.T){
 }
 
 func TestGetClaimFromString(t *testing.T){
-	input := "#1 @ 387,801: 11x22"
+	input1 := "#1 @ 387,801: 11x22"
+	input2 := "#10 @ 77,274: 26x21"
 
-	cla := getClaimFromString(input)
+	cla := getClaimFromString(input1)
 
 	if cla.id != 1 {
 		t.Errorf("GetClaimFromString claim.id: expected: 1, actual: %d", cla.id)
@@ -42,5 +43,27 @@ func TestGetClaimFromString(t *testing.T){
 
 	if cla.height != 22 {
 		t.Errorf("GetClaimFromString claim.height: expected: 22, actual: %d", cla.height)
+	}
+
+	cla2 := getClaimFromString(input2)
+
+	if cla2.id != 10 {
+		t.Errorf("GetClaimFromString claim.id: expected: 10, actual: %d", cla2.id)
+	}
+
+	if cla2.x != 77 {
+		t.Errorf("GetClaimFromString claim.x: expected: 77, actual: %d", cla2.x)
+	}
+
+	if cla2.y != 274 {
+		t.Errorf("GetClaimFromString claim.y: expected: 274, actual: %d", cla2.y)
+	}
+
+	if cla2.width != 26 {
+		t.Errorf("GetClaimFromString claim.width: expected: 26, actual: %d", cla2.width)
+	}
+
+	if cla2.height != 21 {
+		t.Errorf("GetClaimFromString claim.height: expected: 21, actual: %d", cla2.height)
 	}
 }

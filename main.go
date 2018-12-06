@@ -42,4 +42,12 @@ func main(){
 	}
 
 	fmt.Printf("3A. %d\n", a3)
+
+	b3, err := threeB()
+
+	if err != nil {
+		fmt.Errorf("3B died", err)
+	}
+
+	fmt.Printf("3B. %d\n", b3)
 }

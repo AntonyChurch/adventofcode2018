@@ -1,5 +1,6 @@
 # Binaries for programs and plugins
 adventofcode2018
+adventofcode2018.exe
 *.exe
 *.exe~
 *.dll
