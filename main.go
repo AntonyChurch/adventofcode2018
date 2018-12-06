@@ -30,8 +30,24 @@ func main(){
 	b2, err := twoB()
 
 	if err != nil {
-		fmt.Errorf("2A died", err)
+		fmt.Errorf("2B died", err)
 	}
 
 	fmt.Printf("2B. %s\n", b2)
+
+	a3, err := threeA()
+
+	if err != nil {
+		fmt.Errorf("3A died", err)
+	}
+
+	fmt.Printf("3A. %d\n", a3)
+
+	b3, err := threeB()
+
+	if err != nil {
+		fmt.Errorf("3B died", err)
+	}
+
+	fmt.Printf("3B. %d\n", b3)
 }
